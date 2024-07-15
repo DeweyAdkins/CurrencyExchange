@@ -1,0 +1,44 @@
+body {
+    font-family: Arial, sans-serif;
+    background-color: #f5f5f5;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    margin: 0;
+}
+
+.container {
+    background-color: white;
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    width: 400px;
+}
+
+h1, h2 {
+    text-align: center;
+}
+
+.converter, .result, .history, .favorites {
+    margin-bottom: 20px;
+}
+
+.currency-selection, .amount-input {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 10px;
+}
+
+label {
+    margin-right: 10px;
+}
+
+input, select, button {
+    padding: 5px;
+    font-size: 16px;
+}
+
+#converted-amount, #historical-rates, #favorite-pairs {
+    text-align: center;
+}
