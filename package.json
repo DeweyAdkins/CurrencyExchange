@@ -1,13 +1,13 @@
 {
   "name": "currencyexchange",
   "version": "1.0.0",
-  "type": "module",
   "main": "exchange.js",
   "dependencies": {
     "cors": "^2.8.5",
     "express": "^4.19.2",
     "install": "^0.13.0",
     "npm": "^10.8.2",
+    "path": "^0.12.7",
     "sequelize": "^6.37.3"
   },
   "scripts": {

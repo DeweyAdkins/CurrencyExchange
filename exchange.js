@@ -89,6 +89,11 @@ document.addEventListener('DOMContentLoaded', () => {
                 },
                 body: JSON.stringify({ baseCurrency, targetCurrency }),
             });
+
+            if (!response.ok) {
+                throw new Error('Failed to save favorite');
+            }
+
             const data = await response.json();
             console.log('Favorite saved:', data);
             
@@ -101,6 +106,10 @@ document.addEventListener('DOMContentLoaded', () => {
     async function displayFavorites() {
         try {
             const response = await fetch('http://localhost:3000/favorites');
+            if (!response.ok) {
+                throw new Error('Failed to fetch favorites');
+            }
+
             const favorites = await response.json();
             favoritesDiv.innerHTML = '';
 
@@ -118,6 +127,7 @@ document.addEventListener('DOMContentLoaded', () => {
             console.error('Error fetching favorites:', error);
         }
     }
+
     convertBtn.addEventListener('click', convertCurrency);
     viewHistoricalBtn.addEventListener('click', fetchHistoricalRates);
     saveFavoriteBtn.addEventListener('click', () => {
